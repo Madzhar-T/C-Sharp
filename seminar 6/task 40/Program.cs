@@ -11,3 +11,4 @@ int b = Convert.ToInt32(Console.ReadLine());
 Console.Write ("Введите третье число: ");
 int c = Convert.ToInt32(Console.ReadLine());
 
+

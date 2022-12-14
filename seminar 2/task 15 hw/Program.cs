@@ -4,6 +4,9 @@
 // 7 -> да
 // 1 -> нет
 
-Console.Write("Введите номер дня недели: ");
-int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите цифру, обозначающую день недели: ");
+int day = Convert.ToInt32(Console.ReadLine());
+
+if (day >= 1 && day <= 5) Console.WriteLine ("нет");
+if (day == 6 || day == 7) Console.WriteLine ("да");
 
