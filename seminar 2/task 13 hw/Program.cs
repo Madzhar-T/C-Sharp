@@ -8,4 +8,19 @@ Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 // int int.MaxValue ?
-// решения нет
+
+if (number >= 100)
+{
+    while (number > 999)
+    {
+        number = number / 10;
+    }
+    number = number % 10;
+    Console.WriteLine(number);
+}
+
+else
+{
+    Console.WriteLine("третьей цифры нет");
+}
+
