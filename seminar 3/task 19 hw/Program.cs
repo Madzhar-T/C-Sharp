@@ -5,16 +5,31 @@
 // 23432 -> да.
 
 Console.WriteLine("введите пятизначное число: ");
-int five = Convert.ToInt32(Console.ReadLine());
+int nam = Convert.ToInt32(Console.ReadLine());
 
-// if (five < 10000 || five > 99999)
-// {
-//     Console.WriteLine ("введено не пятизначное число");
-// }
+int temp = nam;
+int last = 0;
+int rev = 0;
 
-// else if ()
-// {
-    
-// }
+while (nam > 0)
+{
+    last = nam % 10;
+    rev = rev * 10 + last;
+    nam = nam / 10;
+}
 
-// решения пока нет
+Console.WriteLine(rev);
+
+if (temp == rev)
+{
+    Console.WriteLine("да");
+}
+else
+{
+    Console.WriteLine("нет");
+}
+
+if (temp < 10000 || temp > 99999)
+{
+    Console.WriteLine("Введено не пятизначное число");
+}
