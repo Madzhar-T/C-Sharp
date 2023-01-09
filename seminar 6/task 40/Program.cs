@@ -2,13 +2,21 @@
 // может ли существовать треугольник с сторонами такой длины.
 // Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.
 
-Console.Write ("Введите первое число: ");
-int а = Convert.ToInt32(Console.ReadLine());
+int GetNumber(string messege)
+{
+    Console.WriteLine(messege);
+    return Convert.ToInt32(Console.ReadLine());
+} 
 
-Console.Write ("Введите второе число: ");
-int b = Convert.ToInt32(Console.ReadLine());
+int a = GetNumber("Введите число A: ");
+int b = GetNumber("Введите число B: ");
+int c = GetNumber("Введите число C: ");
 
-Console.Write ("Введите третье число: ");
-int c = Convert.ToInt32(Console.ReadLine());
-
-
+if (a < b+c && b < a+c && c < a+b)
+{
+    Console.WriteLine ("треугольник с такими сторонами может существовать");
+}
+else
+{
+    Console.WriteLine ("треугольник с такими сторонами не может существовать");
+}

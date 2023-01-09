@@ -1,5 +1,12 @@
-﻿// Задача 57: Составить частотный словарь элементов двумерного массива.
-// Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
+﻿// Задача 56: Задайте прямоугольный двумерный массив. Напишите программу,
+// которая будет находить строку с наименьшей суммой элементов.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 5 2 6 7
+// Программа считает сумму элементов в каждой строке
+// и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
 int[,] GetMatrix(int rowsCount, int columnsCount, int leftRange = 0, int rightRange = 9)
 {
@@ -34,19 +41,7 @@ void PrintMatrix(int[,] matr)
     }
 }
 
-int[] task(int[,] matr)
-{
-    int[] result = new int[10];
-    for(int i = 0; i < matr.GetLength(0); i++)
-    {
-        for(int j = 0; j < matr.GetLength(1); j++)
-        {
-            result[matr[i, j]]++;
-        }
-    }
-    return result;
-}
-
+// matr.GetLength(1)
 
 
 int rows = GetNumber("Введите число строк");
@@ -54,8 +49,3 @@ int columns = GetNumber("Введите число столбцов");
 int[,] matrix = GetMatrix(rows, columns);
 PrintMatrix(matrix);
 Console.WriteLine();
-int[] res = task(matrix);
-for(int i = 0; i < res.Length; i++)
-{
-    Console.WriteLine(i + " встречается " + res[i] + " раз");
-}
